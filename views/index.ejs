@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce Cart</title>
+</head>
+<body>
+    <h1>Products</h1>
+    <!-- Mock Product Display -->
+    <div>
+        <p>Product Name: Awesome Widget</p>
+        <p>Price: $10.00</p>
+        <form action="/purchase" method="post">
+            <script
+                src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                data-key="your_publishable_key" <!-- Replace with your Stripe publishable key -->
+                data-amount="1000"
+                data-name="Awesome Widget"
+                data-description="Purchase an Awesome Widget"
+                data-image="https://example.com/path/to/product/image.jpg"
+                data-currency="usd">
+            </script>
+        </form>
+    </div>
+</body>
+</html>
